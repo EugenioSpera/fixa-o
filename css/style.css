@@ -50,34 +50,38 @@
     display: flex;    
     gap: 16px;
     width: 80px; 
-    transition: width 0.5s ease-in, background-color 1.5s; 
+    position: relative; 
     
 }
 
 .btn-send:hover{
-    background-color: rgb(1, 29, 1);
-    width: 50px;
+    animation-name: btn-transform;
+    animation-delay: 0.45s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+
+    
    
 }
 
 .btn-send::after{
     content:"\f1d8";
     font-family: "font Awesome 5 Free";    
-    left: 45px;
-     
+    opacity: 1;
+    position: relative;
+    left: 0;
+    bottom: 0;
+        
 
 }
 
 .btn-send:hover::after{
-    opacity: 0;
-    animation-name: btn-transform;
+    
+    animation-name: voar;
     animation-duration: 0.65s;
     animation-timing-function: ease-in;
-    animation-delay: 1s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-    animation-direction: normal;
-    
+    animation-fill-mode: both;    
 }
 
 @keyframes voar {
